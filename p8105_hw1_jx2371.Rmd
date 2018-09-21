@@ -38,21 +38,23 @@ From the output, the mean of numeric and logical variables can be caculated, whi
 
 ## convert the variables
 And I write a code chunk that applies the as.numeric function to the logical, character, and factor variables. specially，the output is hided.
-```{r convert_numeric, results="hide"}
+```{r convert_numeric, results='hide'}
 as.numeric(df_1$vec_logical)
 as.numeric(df_1$vec_character)
 as.numeric(df_1$vec_factor)
 ```
 As for the logical variables, "TRUE" is converted to "1" and "FALSE" is converted to "0". And the character variables are converted to NA. The factor variables are converted to "1" and "2".  
 
-Then, convert the character variable from character to factor to numeric
-```{r convert_factor_numeric}
+Then, convert the character variable from character to factor to numeric.
+```{r convert_factor_numeric, results='hide'}
 as.numeric(as.factor(df_1$vec_character))
 ```
 We can see the 10 different factor variables are converted to continous integers from 1 to 10.
 
-Lastly, convert the factor variable from factor to character to numeric
-```{r convert_character_numeric}
+Last, convert the factor variable from factor to character to numeric.
+```{r convert_character_numeric, results='hide'}
 as.numeric(as.character(df_1$vec_factor))
 ```
 We can see the factor variables are finally converted to NA.
+
+
